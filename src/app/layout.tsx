@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Work_Sans, Barlow } from 'next/font/google'
 import './globals.css'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
 
 const workSans = Work_Sans({
   variable: '--font-work-sans',
@@ -11,7 +13,7 @@ const workSans = Work_Sans({
 const barlow = Barlow({
   variable: '--font-barlow',
   subsets: ['latin'],
-  weight: ['900', '800', '700'],
+  weight: ['400', '500', '900', '800', '700'],
 })
 
 export const metadata: Metadata = {
@@ -26,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${workSans.variable} ${barlow.variable} antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
