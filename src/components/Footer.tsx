@@ -14,7 +14,7 @@ import { SectionTextContent } from './SectionTextContent'
 
 export function Footer() {
   return (
-    <footer className='mt-4'>
+    <footer id='appointment' className='mt-4'>
       <div className='relative bg-gradient-to-r from-black/80 to-transparent'>
         <div className='w-full max-h-[641px] h-full aspect-video absolute top-0 left-0 -z-10'>
           <Image

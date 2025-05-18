@@ -35,10 +35,14 @@ export function Header() {
           </div>
 
           <div className='z-50 flex items-center justify-center gap-12'>
-            <Button type='button'>Book an Appointment</Button>
-            <Button bgStyle='primary' type='button'>
-              browse services
-            </Button>
+            <a href='#appointment'>
+              <Button type='button'>Book an Appointment</Button>
+            </a>
+            <a href='#services'>
+              <Button bgStyle='primary' type='button'>
+                browse services
+              </Button>
+            </a>
           </div>
         </div>
 

@@ -30,13 +30,19 @@ export function FormAppointment() {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { isSubmitting, errors },
   } = useForm({
     resolver: zodResolver(FormAppointmentSchema),
   })
 
-  function InviteFormAppointment(data: FormAppointment) {
-    console.log(data)
+  async function InviteFormAppointment(data: FormAppointment) {
+    await new Promise(() =>
+      setTimeout(() => {
+        console.log(data)
+        reset()
+      }, 2000)
+    )
   }
 
   return (
@@ -103,7 +109,7 @@ export function FormAppointment() {
       </div>
       <Button
         disabled={isSubmitting}
-        className='w-fit mt-6  hover:text-black hover:ring-black'
+        className='w-fit mt-6 disabled:cursor-not-allowed hover:text-black hover:ring-black'
         type='submit'
       >
         Book an Appointment

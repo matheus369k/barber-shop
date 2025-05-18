@@ -83,7 +83,10 @@ export default function Home() {
         />
       </section>
 
-      <section className='flex flex-col items-center gap-16 max-w-5xl m-auto'>
+      <section
+        id='services'
+        className='flex flex-col items-center gap-16 max-w-5xl m-auto'
+      >
         <div className='flex flex-col gap-9'>
           <SectionTitle>Browse our services</SectionTitle>
           <div className='max-w-[31.25rem]'>
@@ -174,9 +177,11 @@ export default function Home() {
             </ServiceItemRoot>
           </ul>
 
-          <Button type='button' className='hover:ring-black hover:text-black'>
-            Book an Appointment
-          </Button>
+          <a href='#appointment'>
+            <Button type='button' className='hover:ring-black hover:text-black'>
+              Book an Appointment
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -195,7 +200,9 @@ export default function Home() {
           <SectionTitle orientation='center'>
             Experience the luxury of concierge barber services at your home
           </SectionTitle>
-          <Button type='button'>Book an Appointment</Button>
+          <a href='#appointment'>
+            <Button type='button'>Book an Appointment</Button>
+          </a>
         </div>
       </section>
 

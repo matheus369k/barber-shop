@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+* {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
