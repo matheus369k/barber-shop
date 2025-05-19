@@ -5,7 +5,7 @@ export function ContactUsCardRoot({ ...props }: ContactUsCardRootProps) {
   return (
     <div
       {...props}
-      className='max-w-64 flex flex-col items-center justify-center text-center'
+      className='w-56 flex flex-col items-center justify-center text-center'
     />
   )
 }

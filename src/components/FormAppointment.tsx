@@ -48,9 +48,9 @@ export function FormAppointment() {
   return (
     <form
       onSubmit={handleSubmit(InviteFormAppointment)}
-      className='max-w-[37.5rem] max-h-[37.5rem] w-full h-full bg-white text-black shadow-2xl p-9 pb-12 absolute right-0 top-40 z-50 flex flex-col gap-6'
+      className='min-lg:max-w-[37.5rem] min-sm:max-h-[37.5rem] w-full h-fit bg-white text-black shadow-2xl py-8 px-4 min-lg:p-9 pb-12 absolute right-0 top-[22rem] min-md:top-72 min-lg:top-40 z-50 flex flex-col gap-6'
     >
-      <div className='relative'>
+      <div className='relative w-full'>
         <AppointmentLabel htmlFor='full-name'>Full Name</AppointmentLabel>
         <AppointmentInput
           {...register('fullName')}
@@ -60,7 +60,7 @@ export function FormAppointment() {
         />
         <AppointmentErrorMessage error={errors.fullName?.message} />
       </div>
-      <div className='relative'>
+      <div className='relative w-full'>
         <AppointmentLabel htmlFor='subject'>Subject</AppointmentLabel>
         <AppointmentInput
           {...register('subject')}
@@ -70,8 +70,8 @@ export function FormAppointment() {
         />
         <AppointmentErrorMessage error={errors.subject?.message} />
       </div>
-      <div className='flex gap-5'>
-        <div className='relative'>
+      <div className='flex flex-col min-sm:flex-row gap-6'>
+        <div className='relative w-full'>
           <AppointmentLabel htmlFor='phone-number'>
             Phone Number
           </AppointmentLabel>
@@ -83,7 +83,7 @@ export function FormAppointment() {
           />
           <AppointmentErrorMessage error={errors.phoneNumber?.message} />
         </div>
-        <div className='relative'>
+        <div className='relative w-full'>
           <AppointmentLabel htmlFor='email'>E-mail Address</AppointmentLabel>
           <AppointmentInput
             {...register('mail')}
@@ -109,7 +109,7 @@ export function FormAppointment() {
       </div>
       <Button
         disabled={isSubmitting}
-        className='w-fit mt-6 disabled:cursor-not-allowed hover:text-black hover:ring-black'
+        className='w-fit mt-6 disabled:cursor-not-allowed disabled:bg-transparent disabled:ring-black hover:text-black hover:ring-black mx-auto'
         type='submit'
       >
         Book an Appointment

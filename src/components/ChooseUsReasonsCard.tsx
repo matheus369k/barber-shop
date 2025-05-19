@@ -6,7 +6,10 @@ export function ChooseUsReasonsCardRoot({
   ...props
 }: ChooseUsReasonsCardRootProps) {
   return (
-    <li {...props} className='max-w-2xs flex flex-col items-center gap-8' />
+    <li
+      {...props}
+      className='max-w-2xs max-h-56 h-full flex flex-col items-center gap-8'
+    />
   )
 }
 

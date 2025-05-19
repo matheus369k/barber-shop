@@ -1,11 +1,13 @@
 import type { ComponentProps } from 'react'
 import { tv } from 'tailwind-variants'
+import { twMerge } from 'tailwind-merge'
 
 interface SectionTextContentProps extends ComponentProps<'p'> {
   orientation?: 'center' | 'start'
 }
 
 export function SectionTextContent({
+  className,
   orientation,
   ...props
 }: SectionTextContentProps) {
@@ -21,5 +23,10 @@ export function SectionTextContent({
       Text: 'start',
     },
   })
-  return <p {...props} className={paragraph({ Text: orientation })} />
+  return (
+    <p
+      {...props}
+      className={twMerge(paragraph({ Text: orientation }), className)}
+    />
+  )
 }

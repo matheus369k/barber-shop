@@ -19,5 +19,10 @@ export function MapLocation() {
     const marker = new maplibregl.Marker().setLngLat(LngLat).addTo(map)
   }, [])
 
-  return <div id='map' className='h-[28.125rem] w-full' />
+  return (
+    <div
+      id='map'
+      className='h-[44rem] min-sm:h-[37.5rem] min-lg:h-[28.125rem] w-full'
+    />
+  )
 }
