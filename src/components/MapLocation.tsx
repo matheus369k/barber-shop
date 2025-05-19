@@ -9,8 +9,7 @@ export function MapLocation() {
     const LngLat: LngLatLike = [-77.04, 38.907]
     const map = new maplibregl.Map({
       container: 'map',
-      style:
-        'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+      style: `https://api.maptiler.com/maps/streets/style.json?key=${process.env.NEXT_PUBLIC_GEO_MAP_KEY}`,
       center: LngLat,
       zoom: 11.15,
       attributionControl: false,
